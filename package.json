@@ -1,0 +1,44 @@
+{
+  "name": "claude-code-ux-auditor",
+  "version": "1.0.0",
+  "description": "Cognitive UX audit skills for Claude Code - identify usability issues using psychology principles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "claude-code",
+    "ux",
+    "usability",
+    "audit",
+    "cognitive-psychology",
+    "frontend",
+    "ui",
+    "accessibility",
+    "stroop-effect",
+    "user-experience",
+    "skill"
+  ],
+  "author": "Guy Balzam",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dannystrelitz-ai/UX-review-agent"
+  },
+  "bugs": {
+    "url": "https://github.com/dannystrelitz-ai/UX-review-agent/issues"
+  },
+  "homepage": "https://github.com/dannystrelitz-ai/UX-review-agent",
+  "claudeCode": {
+    "skills": [
+      ".claude/skills/ux-review.md",
+      ".claude/skills/ux-audit.md"
+    ]
+  },
+  "files": [
+    ".claude/",
+    "README.md",
+    "EXAMPLES.md",
+    "LICENSE"
+  ]
+}
