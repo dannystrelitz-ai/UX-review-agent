@@ -1,13 +1,19 @@
 {
-  "name": "UX Audit Tools Marketplace",
-  "version": "1.0.0",
-  "description": "Professional UX audit and cognitive design analysis tools for Claude Code",
+  "name": "ux-audit-tools",
+  "owner": {
+    "name": "Guy Balzam",
+    "email": "guy@example.com"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Professional UX audit and cognitive design analysis tools for Claude Code"
+  },
   "plugins": [
     {
       "name": "ux-audit-agent",
+      "source": "./",
       "version": "1.0.0",
       "description": "Professional UX audit toolkit with cognitive frameworks and evidence-based heuristics. Includes quick post-dev reviews, deep audits with scoring, and user expectation analysis.",
-      "source": "./",
       "author": {
         "name": "Guy Balzam",
         "email": "guy@example.com",
