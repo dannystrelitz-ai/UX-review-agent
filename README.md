@@ -28,44 +28,83 @@ This package provides three powerful skills and one specialized agent for UX ana
 - **Persona-Based Evaluation**: Customizes audits based on user profession, digital habitat, and domain semantics
 - **Severity Classification**: Prioritizes issues from Critical (Stroop conflicts) to Low (minor optimizations)
 
+## Requirements
+
+- Claude Code 1.0.33 or later
+- Basic understanding of UX principles (helpful but not required)
+
 ## Quick Start
+
+Install the plugin and start auditing:
+
+```bash
+# Add the marketplace
+claude marketplace add https://github.com/dannystrelitz-ai/UX-review-agent
+
+# Install the plugin
+claude plugin install ux-audit-agent
+
+# Start using it
+claude
+# Then ask: "Run a UX review on my app" or use /ux-audit-agent:ux-review
+```
 
 For detailed installation instructions, see **[INSTALL.md](INSTALL.md)**.
 
 ## Installation
 
-### Manual Installation
+### Plugin Installation (Recommended)
 
-1. **Clone or download this repository**:
+Install the plugin using Claude Code's marketplace system:
+
+```bash
+# Add the UX Audit Tools marketplace
+claude marketplace add https://github.com/dannystrelitz-ai/UX-review-agent
+
+# Install the plugin
+claude plugin install ux-audit-agent
+```
+
+**Verify installation:**
+Open Claude Code and type `/ux-audit-agent:` - you should see the available skills in autocomplete.
+
+### Manual Installation (Alternative)
+
+If you prefer to install manually:
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/ux-agent.git
-   cd ux-agent
+   git clone https://github.com/dannystrelitz-ai/UX-review-agent.git
+   cd UX-review-agent
    ```
 
-2. **Copy the skills and agents to your project's `.claude` directory**:
+2. **Install as a local plugin**:
    ```bash
-   # If you want to install globally for all projects
-   mkdir -p ~/.claude/skills ~/.claude/agents
-   cp -r .claude/skills/* ~/.claude/skills/
-   cp -r .claude/agents/* ~/.claude/agents/
-
-   # OR install per-project
-   mkdir -p .claude/skills .claude/agents
-   cp -r /path/to/ux-agent/.claude/skills/* .claude/skills/
-   cp -r /path/to/ux-agent/.claude/agents/* .claude/agents/
+   claude plugin add /path/to/UX-review-agent
    ```
 
 3. **Verify installation**:
-   Open Claude Code and type `/ux` - you should see the skills in autocomplete.
+   ```bash
+   claude plugin list
+   ```
 
 ## Usage
 
-### Quick UX Review with `/ux-review`
+Once installed, the plugin provides three skills accessible via the `ux-audit-agent:` namespace:
+
+### Quick UX Review with `ux-review`
 
 Use this after writing frontend code for a quick cognitive UX check:
 
-```bash
-/ux-review
+**Invocation:**
+```
+/ux-audit-agent:ux-review
+```
+
+Or simply ask Claude:
+```
+"Run a quick UX review on my app"
+"Review the UX of this component"
 ```
 
 This skill is designed to be invoked:
@@ -75,12 +114,19 @@ This skill is designed to be invoked:
 
 The agent will automatically analyze your UI code for common cognitive friction points.
 
-### Comprehensive Audit with `/ux-audit`
+### Comprehensive Audit with `ux-audit`
 
 For deep, persona-driven UX analysis:
 
-```bash
-/ux-audit
+**Invocation:**
+```
+/ux-audit-agent:ux-audit
+```
+
+Or ask Claude:
+```
+"Conduct a deep UX audit"
+"Perform a cognitive UX analysis"
 ```
 
 This starts an interactive audit process:
@@ -107,11 +153,33 @@ This starts an interactive audit process:
    - Cognitive conflicts explained
    - Concrete fix recommendations
 
+### Evidence-Based Audit with the UX Audit Agent
+
+For autonomous, scored UX audits (0-100 rating):
+
+**Invocation:**
+Simply ask Claude to conduct an audit, and it will automatically use the agent:
+```
+"Conduct a UX audit of my application"
+"Run an evidence-based UX analysis with scoring"
+"Audit the checkout flow for cognitive friction"
+```
+
+The agent will:
+- Perform a defensible, evidence-based analysis
+- Apply Nielsen, Shneiderman, and Don Norman heuristics
+- Provide a scored report (0-100)
+- Prioritize issues by severity and ROI
+- Deliver actionable recommendations
+
 ### Example Workflow
 
 ```bash
-# After building a checkout flow
-/ux-audit
+# After building a checkout flow, ask Claude:
+"Conduct a cognitive UX audit of the checkout flow"
+
+# Or use the skill directly:
+/ux-audit-agent:ux-audit
 
 # Agent asks:
 "What is the primary user's role?"

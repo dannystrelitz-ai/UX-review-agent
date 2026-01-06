@@ -1,0 +1,14 @@
+{
+  "name": "ux-audit-agent",
+  "version": "1.0.0",
+  "description": "Professional UX audit toolkit with cognitive frameworks and evidence-based heuristics. Includes quick post-dev reviews, deep audits with scoring, and user expectation analysis.",
+  "author": {
+    "name": "Guy Balzam",
+    "email": "guy@example.com",
+    "url": "https://github.com/guybalzam"
+  },
+  "homepage": "https://github.com/dannystrelitz-ai/UX-review-agent",
+  "repository": "https://github.com/dannystrelitz-ai/UX-review-agent",
+  "license": "MIT",
+  "keywords": ["ux", "audit", "cognitive", "usability", "design", "heuristics", "qa", "stroop-effect", "nielsen-norman"]
+}

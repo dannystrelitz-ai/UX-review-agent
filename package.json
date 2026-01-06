@@ -1,8 +1,7 @@
 {
-  "name": "claude-code-ux-auditor",
+  "name": "ux-audit-agent-plugin",
   "version": "1.0.0",
-  "description": "Cognitive UX audit skills for Claude Code - identify usability issues using psychology principles",
-  "main": "index.js",
+  "description": "Professional UX audit toolkit for Claude Code with cognitive frameworks and evidence-based heuristics. Includes quick post-dev reviews, deep audits with scoring, and user expectation analysis.",
   "scripts": {
     "test": "echo \"No tests yet\" && exit 0"
   },
@@ -14,33 +13,36 @@
     "cognitive-psychology",
     "frontend",
     "ui",
-    "accessibility",
+    "design",
     "stroop-effect",
     "user-experience",
-    "skill"
+    "nielsen-norman",
+    "heuristics",
+    "shneiderman"
   ],
-  "author": "Guy Balzam",
+  "author": {
+    "name": "Guy Balzam",
+    "email": "guy@example.com",
+    "url": "https://github.com/guybalzam"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dannystrelitz-ai/UX-review-agent"
+    "url": "https://github.com/dannystrelitz-ai/UX-review-agent.git"
   },
   "bugs": {
     "url": "https://github.com/dannystrelitz-ai/UX-review-agent/issues"
   },
   "homepage": "https://github.com/dannystrelitz-ai/UX-review-agent",
-  "claudeCode": {
-    "skills": [
-      ".claude/skills/ux-review.md",
-      ".claude/skills/ux-audit.md",
-      ".claude/skills/ux-audit-agent.md",
-      ".claude/skills/user-expectations.md"
-    ]
-  },
+  "private": false,
   "files": [
-    ".claude/",
+    ".claude-plugin/",
+    "skills/",
+    "agents/",
     "README.md",
     "EXAMPLES.md",
+    "INSTALL.md",
+    "CHANGELOG.md",
     "LICENSE"
   ]
 }
