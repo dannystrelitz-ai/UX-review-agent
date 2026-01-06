@@ -32,7 +32,9 @@
   "claudeCode": {
     "skills": [
       ".claude/skills/ux-review.md",
-      ".claude/skills/ux-audit.md"
+      ".claude/skills/ux-audit.md",
+      ".claude/skills/ux-audit-agent.md",
+      ".claude/skills/user-expectations.md"
     ]
   },
   "files": [
