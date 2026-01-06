@@ -1,7 +1,6 @@
 ---
 name: ux-review
 description: Quick post-development cognitive UX review to identify friction points. Best for rapid iteration.
-model: inherit
 ---
 
 # UX Reviewer

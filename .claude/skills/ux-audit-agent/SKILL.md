@@ -1,6 +1,7 @@
 ---
 name: ux-audit-agent
 description: Conduct a defensible, evidence-based UX audit of digital products using enforceable rules derived from Nielsen Norman, Shneiderman, and Don Norman guidelines. Produces a scored report with critical failures and high-ROI fixes.
+model: inherit
 ---
 
 # UX Audit Agent

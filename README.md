@@ -4,10 +4,12 @@ A comprehensive UX auditing toolkit for Claude Code that helps identify cognitiv
 
 ## What's Included
 
-This package provides two powerful skills for UX analysis:
+This package provides four powerful skills for UX analysis:
 
-1. **`/ux-review`** - Quick UX review agent for post-development audits
+1. **`/ux-review`** - Quick UX review for post-development audits
 2. **`/ux-audit`** - Comprehensive cognitive UX audit with detailed persona-based analysis
+3. **`/ux-audit-agent`** - Evidence-based UX audit with scoring framework (0-100)
+4. **`/user-expectations`** - Analyzes implicit expectations created by interface elements
 
 ## Documentation
 
@@ -41,11 +43,11 @@ For detailed installation instructions, see **[INSTALL.md](INSTALL.md)**.
    ```bash
    # If you want to install globally for all projects
    mkdir -p ~/.claude/skills
-   cp .claude/skills/* ~/.claude/skills/
+   cp -r .claude/skills/* ~/.claude/skills/
 
    # OR install per-project
    mkdir -p .claude/skills
-   cp /path/to/ux-agent/.claude/skills/* .claude/skills/
+   cp -r /path/to/ux-agent/.claude/skills/* .claude/skills/
    ```
 
 3. **Verify installation**:

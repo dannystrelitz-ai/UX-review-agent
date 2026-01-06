@@ -1,6 +1,7 @@
 ---
 name: user-expectations
 description: Analyze implicit user expectations created by the interface, comparing what is promised vs. delivered. Use in addition to usability heuristics to uncover deep UX insights.
+model: inherit
 ---
 
 # User Expectations Analysis

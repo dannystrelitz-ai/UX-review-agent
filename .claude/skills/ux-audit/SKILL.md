@@ -1,6 +1,7 @@
 ---
 name: ux-audit
 description: Conduct a deep cognitive UX audit identifying friction points, Stroop effects, and mental model mismatches. Requires user persona context.
+model: inherit
 ---
 
 # Cognitive UX Audit
