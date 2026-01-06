@@ -4,11 +4,11 @@
 ux-agent/
 ├── .claude/
 │   ├── settings.local.json          # Local Claude Code settings
+│   ├── agents/
+│   │   └── ux-audit-agent.md        # Autonomous UX audit agent with scoring
 │   └── skills/
 │       ├── ux-audit/
 │       │   └── SKILL.md             # Comprehensive cognitive UX audit skill
-│       ├── ux-audit-agent/
-│       │   └── SKILL.md             # Evidence-based UX audit with scoring
 │       ├── ux-review/
 │       │   └── SKILL.md             # Quick UX review skill
 │       └── user-expectations/
@@ -26,6 +26,16 @@ ux-agent/
 
 ## File Descriptions
 
+### Agents
+
+**`.claude/agents/ux-audit-agent.md`**
+- Autonomous agent for evidence-based UX audits
+- Uses Nielsen Norman, Shneiderman, and Don Norman principles
+- Produces scored reports (0-100) with weighted sections
+- Identifies critical failures and high-ROI fixes
+- Professional-grade output for stakeholder discussions
+- Invocation: Claude delegates to this agent automatically or via explicit Task tool
+
 ### Core Skills
 
 **`.claude/skills/ux-audit/SKILL.md`**
@@ -34,13 +44,6 @@ ux-agent/
 - Multi-step process: context gathering → screen discovery → visual hierarchy → cognitive audit
 - Generates detailed reports with severity levels
 - Use: `/ux-audit`
-
-**`.claude/skills/ux-audit-agent/SKILL.md`**
-- Evidence-based UX audit using Nielsen Norman, Shneiderman, and Don Norman principles
-- Produces scored reports (0-100) with weighted sections
-- Identifies critical failures and high-ROI fixes
-- Professional-grade output for stakeholder discussions
-- Use: `/ux-audit-agent`
 
 **`.claude/skills/ux-review/SKILL.md`**
 - Quick UX review for post-development checks
@@ -123,29 +126,31 @@ Skill reports: Cognitive friction points with fixes
 
 ### Global Installation
 ```
-~/.claude/skills/
-├── ux-audit/
-│   └── SKILL.md
-├── ux-audit-agent/
-│   └── SKILL.md
-├── ux-review/
-│   └── SKILL.md
-└── user-expectations/
-    └── SKILL.md
-```
-
-### Per-Project Installation
-```
-your-project/
-└── .claude/skills/
+~/.claude/
+├── agents/
+│   └── ux-audit-agent.md
+└── skills/
     ├── ux-audit/
-    │   └── SKILL.md
-    ├── ux-audit-agent/
     │   └── SKILL.md
     ├── ux-review/
     │   └── SKILL.md
     └── user-expectations/
         └── SKILL.md
+```
+
+### Per-Project Installation
+```
+your-project/
+└── .claude/
+    ├── agents/
+    │   └── ux-audit-agent.md
+    └── skills/
+        ├── ux-audit/
+        │   └── SKILL.md
+        ├── ux-review/
+        │   └── SKILL.md
+        └── user-expectations/
+            └── SKILL.md
 ```
 
 ## Key Relationships
@@ -171,10 +176,11 @@ package.json
 When adding new features:
 
 1. **New skill**: Create folder in `.claude/skills/` with `SKILL.md` file
-2. **Metadata**: Add frontmatter with `name`, `description`, and `model: inherit`
-3. **Update**: `package.json` → `claudeCode.skills` array
-4. **Document**: Add usage examples to `EXAMPLES.md`
-5. **Announce**: Update `README.md` and `STRUCTURE.md` with new capability
+2. **New agent**: Create `.md` file in `.claude/agents/` (e.g., `agent-name.md`)
+3. **Metadata**: Add frontmatter with `name`, `description`, and `model: inherit`
+4. **Update**: `package.json` → `claudeCode.skills` or `claudeCode.agents` array
+5. **Document**: Add usage examples to `EXAMPLES.md`
+6. **Announce**: Update `README.md` and `STRUCTURE.md` with new capability
 
 ## For Users
 
@@ -183,4 +189,4 @@ To understand this package:
 1. **Start**: Read `README.md`
 2. **Install**: Follow `INSTALL.md`
 3. **Learn**: Study `EXAMPLES.md`
-4. **Use**: Type `/ux-audit`, `/ux-review`, `/ux-audit-agent`, or `/user-expectations` in Claude Code
+4. **Use**: Type `/ux-audit`, `/ux-review`, or `/user-expectations` in Claude Code (skills are invoked with `/`; agents run automatically when Claude delegates to them)
