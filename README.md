@@ -39,10 +39,10 @@ Install the plugin and start auditing:
 
 ```bash
 # Add the marketplace
-claude marketplace add https://github.com/dannystrelitz-ai/UX-review-agent
+/plugin marketplace add dannystrelitz-ai/UX-review-agent
 
 # Install the plugin
-claude plugin install ux-audit-agent
+/plugin install ux-audit-agent@ux-audit-tools
 
 # Start using it
 claude
@@ -59,10 +59,10 @@ Install the plugin using Claude Code's marketplace system:
 
 ```bash
 # Add the UX Audit Tools marketplace
-claude marketplace add https://github.com/dannystrelitz-ai/UX-review-agent
+/plugin marketplace add dannystrelitz-ai/UX-review-agent
 
 # Install the plugin
-claude plugin install ux-audit-agent
+/plugin install ux-audit-agent@ux-audit-tools
 ```
 
 **Verify installation:**
@@ -80,12 +80,13 @@ If you prefer to install manually:
 
 2. **Install as a local plugin**:
    ```bash
-   claude plugin add /path/to/UX-review-agent
+   /plugin marketplace add /path/to/UX-review-agent
+   /plugin install ux-audit-agent@ux-audit-tools
    ```
 
 3. **Verify installation**:
    ```bash
-   claude plugin list
+   /plugin list
    ```
 
 ## Usage
